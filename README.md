@@ -1,5 +1,5 @@
 <p align="center">  
-    <img alt="AppIcon" src="https://github.com/VasilisPat/Accounting-Managememt/blob/master/icons/appsmall.png"/>
+    <img alt="AppIcon" src="/icons/appsmall.png"/>
 </p>
 
 # Accounting Managememt
