@@ -1,0 +1,51 @@
+Accounting Management Software v1.0 	
+
+©2020 Vasilis Patelis
+Contact Info: vasileiospat@hotmail.com
+
+
+Simple accounting management app. Designed using ©Java Swing. This documentation contains information on how to use the application, its submenus
+and general instruction on data entry(types,length,spacing etc.), which is described in each submenu instruction individually.
+
+-Login Menu: Input for mySQL database credentials entry. If the user inserts wrong username or password the application exits for security
+	     precautions. Use credentials registered during mySQL installation.
+-Welcome Menu: Central menu of the application. From here you can select a submenu, based on your desired action.
+
+-Income List Menu: Displays the income list stored in the database. Input fields entries must be of type:
+			-Income Date:yyyy/mm/dd (eg. 2020/01/01) Dates can't be duplicated
+			-Total Daily Income: number.decimalPoint (eg. 100.10)
+		   --Add Button: Inserts typed data from Income Date & Total Daily Income text fields into database.
+		   --Delete Button: Deletes which row is selected in the income list from database. If no row is selected error will occur.
+		   --Return Button: Takes user back to Welcome Menu
+
+-Expenses List Menu: Displays both expenses and suppliers lists stored in the database. Input fields entries must be of type:
+			-Supplier ID: User must consult suppliers table to retrieve supplier id for new expense entry
+			-Expense Date Date:yyyy/mm/dd (eg. 2020/01/01)
+			-Expense Sum: number.decimalPoint (eg. 100.10)
+			-Description: Up to 50 characters. Description can't be duplicated
+		   --Add Button: Inserts typed data from Supplier ID, Expense Date, Expense Sum, text fields into database.
+		   --Delete Button: Deletes which row is selected in the expenses list from database. If no row is selected error will occur.
+		   --Return Button: Takes user back to Welcome Menu
+
+-Expenses List Menu: Displays both expenses and suppliers lists stored in the database. Input fields entries must be of type:
+			-Supplier ID: Automatically generated from the application
+			-Supplier Name: Up to 25 characters.
+		   --Add Button: Inserts typed data from Supplier Name text fields into database.
+		   --Delete Button: Deletes which row is selected in the suppliers list from database. If no row is selected error will occur.
+		   --Return Button: Takes user back to Welcome Menu
+
+-Export to PDF Menu: Exports selected list from dropdown list. The printer menu opens for user to choose desired priter & printing method.
+		     Caution: When selecting expenses list print mode must be set to landscape view for proper print of the list.
+		   --Return Button: Takes user back to Welcome Menu
+
+-About Menu: Information about the application.
+		   --Documentation Button: Opens application's documentation(this file)
+		   --Return Button: Takes user back to Welcome Menu
+		   --Exit Button: Disconnects from database and exits application.
+
+-Error Code and Description 
+	-1: Driver Not Loaded
+	1: Connection To Database Failed
+	2: Database Not Found
+	3: False Input
+	4: Action can't be completed
