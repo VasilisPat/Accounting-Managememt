@@ -12,19 +12,19 @@ public class DateConversion {
 
   public static String formatDate(String inDate) {
     String outDate = "";
-    if (inDate != null) {
-        try {
+    if(inDate != null) {
+        try{
             Date date = inSDF.parse(inDate);
             outDate = outSDF.format(date);
-        } catch (ParseException pex){
-           JOptionPane.showMessageDialog(null,"Database Not Found (Error 4)");
+        }catch (ParseException ex){
+           JOptionPane.showMessageDialog(null,"Database Not Found (Error Code: 4)","Error",JOptionPane.ERROR_MESSAGE);
         }
     }
     try{
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy/mm/dd");
         Date retDate = formatter.parse(outDate);
-    }catch(ParseException pex){
-        JOptionPane.showMessageDialog(null,"Database Not Found (Error 4)");
+    }catch(ParseException ex){
+        JOptionPane.showMessageDialog(null,"Database Not Found (Error Code: 4)","Error",JOptionPane.ERROR_MESSAGE);
     }
     return outDate;
   }
